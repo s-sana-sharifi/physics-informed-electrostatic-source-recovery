@@ -133,3 +133,7 @@ Other possible extensions include:
 - Comparing neural predictions with purely optimization-based recovery
 - Modeling simplified detector response functions
 - Exploring inverse dose reconstruction in synthetic computational dosimetry settings
+
+## License
+
+This project is licensed under the MIT License.
