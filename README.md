@@ -54,7 +54,7 @@ A differentiable electrostatic forward model is used to compute the potential ge
 A multilayer perceptron (MLP) is trained to learn the inverse mapping:
 
 <p align="center">
-  Boundary Potential → Source Positions and Charges
+  Boundary measurements → source positions and charge magnitudes
 </p>
 
 The model takes boundary potential measurements as input and directly predicts the source parameters.
@@ -76,6 +76,10 @@ This encourages the neural network predictions to remain consistent with the und
 The neural network prediction is used as a fast initial guess. Differentiable physics-based optimization then refines the predicted source parameters to better match the observed boundary potential.
 
 This hybrid approach combines the speed of neural inference with the accuracy of physics-based optimization.
+
+## Main Takeaway
+
+The neural network provides a fast approximate inverse prediction, while physics-based refinement improves the final recovery accuracy.
 
 ## Results
 
