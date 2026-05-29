@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 __pycache__/
 .ipynb_checkpoints/
 .env
@@ -230,3 +231,6 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 >>>>>>> 35491a7963be65308deed038830eb95169adfa19
+=======
+
+>>>>>>> 0545d1c44f416f2136dec9a01931955de69cd59f

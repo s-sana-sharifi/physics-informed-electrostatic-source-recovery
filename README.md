@@ -36,9 +36,9 @@ For each sample:
 - Boundary input dimension: 196
 - Output dimension: 6
 
-$$
+/[
 (x_1, y_1, x_2, y_2, q_1, q_2)
-$$
+/]
 
 - Training samples: 2500
 - Test samples: 500
@@ -53,11 +53,11 @@ A differentiable electrostatic forward model is used to compute the potential ge
 
 A multilayer perceptron (MLP) is trained to learn the inverse mapping
 
-$$
+/[
 \text{Boundary Potential}
 \rightarrow
 \text{Source Positions and Charges}
-$$
+\]
 
 The model takes boundary potential measurements as input and directly predicts the source parameters.
 
@@ -65,12 +65,12 @@ The model takes boundary potential measurements as input and directly predicts t
 
 The supervised model is further trained using a combined loss function:
 
-$$
+/[
 \mathcal{L}_{\text{total}}
 \alpha \mathcal{L}_{\text{supervised}}
 +
 \beta \mathcal{L}_{\text{physics}}
-$$
+/]
 
 The physics loss reconstructs the boundary potential from the predicted source parameters and compares it with the measured boundary potential.
 
