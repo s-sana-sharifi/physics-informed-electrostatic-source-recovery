@@ -1,4 +1,3 @@
-﻿
 # Physics-Informed AI for Electrostatic Source Recovery
 
 This project explores an inverse electrostatics problem using differentiable physics and neural networks.
@@ -35,13 +34,14 @@ For each sample:
 - Grid size: 50 × 50
 - Boundary input dimension: 196
 - Output dimension: 6
-
-\[
-(x_1, y_1, x_2, y_2, q_1, q_2) 
-\]
-
 - Training samples: 2500
 - Test samples: 500
+
+Output parameters:
+
+<p align="center">
+  (x<sub>1</sub>, y<sub>1</sub>, x<sub>2</sub>, y<sub>2</sub>, q<sub>1</sub>, q<sub>2</sub>)
+</p>
 
 ## Methods
 
@@ -51,14 +51,11 @@ A differentiable electrostatic forward model is used to compute the potential ge
 
 ### 2. Supervised Neural Inverse Solver
 
-A multilayer perceptron (MLP) is trained to learn the inverse mapping
+A multilayer perceptron (MLP) is trained to learn the inverse mapping:
 
-\[
-\text{Boundary Potential}
-\rightarrow
-\text{Source Positions and Charges}
-\]
-
+<p align="center">
+  Boundary Potential → Source Positions and Charges
+</p>
 
 The model takes boundary potential measurements as input and directly predicts the source parameters.
 
@@ -66,12 +63,9 @@ The model takes boundary potential measurements as input and directly predicts t
 
 The supervised model is further trained using a combined loss function:
 
-\[
-\mathcal{L}_{\text{total}}
-\alpha \mathcal{L}_{\text{supervised}}
-+
-\beta \mathcal{L}_{\text{physics}}
-\]
+<p align="center">
+  L<sub>total</sub> = α L<sub>supervised</sub> + β L<sub>physics</sub>
+</p>
 
 The physics loss reconstructs the boundary potential from the predicted source parameters and compares it with the measured boundary potential.
 
@@ -91,7 +85,7 @@ The main evaluation metrics are:
 - Mean charge error
 
 | Method | Mean Position Error | Mean Charge Error |
-|----------|-------------------:|------------------:|
+|---|---:|---:|
 | Supervised MLP | 0.981 | 0.920 |
 | Physics-informed MLP | 0.884 | 0.837 |
 | Physics-informed MLP before refinement | 0.931 | 1.115 |
