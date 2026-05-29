@@ -136,14 +136,11 @@ physics-informed-electrostatic-source-recovery/
 ├── notebooks/
 │   └── 01_physics_informed_electrostatic_source_recovery.ipynb
 ├── src/
-│   └── electrostatic_inverse.py
+│   └── 01_physics_informed_electrostatic_source_recovery.py
 ├── requirements.txt
 ├── LICENSE
 └── README.md
 ```
-
-If the project is still notebook-only, the `src/` folder can be added later when reusable functions are separated from the notebook.
-
 ---
 
 ## How to Run
