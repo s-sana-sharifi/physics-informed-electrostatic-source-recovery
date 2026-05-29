@@ -1,6 +1,14 @@
 # Physics-Informed AI for Electrostatic Source Recovery
 
-This project explores an inverse electrostatics problem using differentiable physics and neural networks.
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![PyTorch](https://img.shields.io/badge/PyTorch-deep%20learning-red)
+![Jupyter](https://img.shields.io/badge/Jupyter-notebook-orange)
+![Physics-Informed Learning](https://img.shields.io/badge/physics--informed-learning-purple)
+![Inverse Problems](https://img.shields.io/badge/inverse-problems-green)
+![Scientific Computing](https://img.shields.io/badge/scientific-computing-lightgrey)
+![License](https://img.shields.io/badge/license-MIT-yellow)
+
+This project explores a synthetic inverse electrostatics problem using differentiable physics and neural networks.
 
 Given electric potential measurements on the boundary of a 2D domain, the goal is to recover the hidden point charge locations and charge magnitudes inside the domain.
 
@@ -10,11 +18,25 @@ The project compares three approaches:
 2. A physics-informed neural inverse solver
 3. A hybrid method that uses a neural network prediction as an initial guess and refines it with physics-based optimization
 
+---
+
+## Main Takeaway
+
+The neural network provides a fast approximate inverse prediction, while physics-based refinement improves the final recovery accuracy.
+
+In this experiment, the hybrid neural + physics refinement method achieved the lowest mean position and charge errors.
+
+---
+
 ## Motivation
 
 Inverse problems appear in many areas of physics, imaging, and medical physics. In these problems, the goal is to infer hidden physical parameters from indirect or limited measurements.
 
 This project serves as a proof of concept for physics-informed AI. A neural network learns an approximate inverse mapping, while a known physical forward model is used to evaluate and refine the prediction.
+
+The project is not intended to model a real clinical system. Instead, it demonstrates a reusable workflow: synthetic data generation, neural inverse prediction, physics-informed consistency checking, and optimization-based refinement.
+
+---
 
 ## Problem Setup
 
@@ -42,6 +64,8 @@ Output parameters:
 <p align="center">
   (x<sub>1</sub>, y<sub>1</sub>, x<sub>2</sub>, y<sub>2</sub>, q<sub>1</sub>, q<sub>2</sub>)
 </p>
+
+---
 
 ## Methods
 
@@ -77,9 +101,7 @@ The neural network prediction is used as a fast initial guess. Differentiable ph
 
 This hybrid approach combines the speed of neural inference with the accuracy of physics-based optimization.
 
-## Main Takeaway
-
-The neural network provides a fast approximate inverse prediction, while physics-based refinement improves the final recovery accuracy.
+---
 
 ## Results
 
@@ -95,6 +117,8 @@ The main evaluation metrics are:
 | Physics-informed MLP before refinement | 0.931 | 1.115 |
 | Hybrid MLP + Physics Refinement | 0.516 | 0.632 |
 
+---
+
 ## Key Observations
 
 - The supervised MLP learns a useful inverse mapping from boundary measurements to hidden source parameters.
@@ -102,6 +126,60 @@ The main evaluation metrics are:
 - The hybrid method achieves the best overall performance.
 - Physics-based refinement substantially reduces both position error and charge error.
 - Visual examples show that refinement moves predicted source locations closer to the true hidden source locations.
+
+---
+
+## Repository Structure
+
+```text
+physics-informed-electrostatic-source-recovery/
+├── notebooks/
+│   └── 01_physics_informed_electrostatic_source_recovery.ipynb
+├── src/
+│   └── electrostatic_inverse.py
+├── requirements.txt
+├── LICENSE
+└── README.md
+```
+
+If the project is still notebook-only, the `src/` folder can be added later when reusable functions are separated from the notebook.
+
+---
+
+## How to Run
+
+Clone the repository:
+
+```bash
+git clone https://github.com/s-sana-sharifi/physics-informed-electrostatic-source-recovery.git
+cd physics-informed-electrostatic-source-recovery
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Open the notebook:
+
+```bash
+jupyter notebook notebooks/01_physics_informed_electrostatic_source_recovery.ipynb
+```
+
+---
+
+## Requirements
+
+Main libraries used:
+
+- Python 3.10+
+- PyTorch
+- NumPy
+- Pandas
+- Matplotlib
+
+---
 
 ## Skills Demonstrated
 
@@ -115,11 +193,15 @@ The main evaluation metrics are:
 - Scientific visualization
 - Model evaluation and comparison
 
+---
+
 ## Limitations
 
 This is a synthetic proof-of-concept problem. The domain is two-dimensional and homogeneous, the number of sources is assumed to be known, and the sources are modeled as softened point charges.
 
 The current model does not represent real radiation transport, clinical dosimetry, or a medical imaging system. The goal is to demonstrate an inverse-modeling workflow rather than solve a clinical problem directly.
+
+---
 
 ## Future Directions
 
@@ -134,6 +216,8 @@ Other possible extensions include:
 - Modeling simplified detector response functions
 - Exploring inverse dose reconstruction in synthetic computational dosimetry settings
 
+---
+
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. See the `LICENSE` file for details.
