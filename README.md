@@ -109,6 +109,18 @@ The models are evaluated using two metrics:
 | Physics-informed MLP before refinement |               0.931 |             1.115 |
 | Hybrid MLP + Physics Refinement        |           **0.516** |         **0.632** |
 
+## Example Figures
+
+The following plots compare the mean position and charge errors across the evaluated methods.
+
+![Position error comparison](figures/position_error_comparison.png)
+
+![Charge error comparison](figures/charge_error_comparison.png)
+
+The following example illustrates how physics-based refinement improves the initial neural network prediction.
+
+![Hybrid refinement example](figures/hybrid_refinement_example.png)
+
 ## Discussion
 
 The supervised MLP was able to learn an approximate inverse mapping from boundary measurements to source parameters.
