@@ -1,4 +1,3 @@
-
 # Physics-Informed AI for Electrostatic Source Recovery
 
 This project investigates a synthetic inverse electrostatics problem using neural networks and differentiable physics.
