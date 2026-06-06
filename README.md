@@ -32,7 +32,7 @@ The predicted output has the form:
 
 ```text
 (x1, y1, x2, y2, q1, q2)
-````
+```
 
 where:
 
@@ -77,7 +77,7 @@ The model receives boundary potential values as input and predicts the six unkno
 The supervised model is further trained using a combined loss function:
 
 ```text
-L_total = alpha * L_supervised + beta * L_physics
+L_total = α L_supervised + β L_physics
 ```
 
 The supervised loss compares the predicted source parameters with the true source parameters.
@@ -216,7 +216,7 @@ The purpose of the project is to demonstrate an inverse-modeling workflow rather
 Possible extensions of this project include:
 
 * Testing different numbers of sources
-* Adding noise to boundary measurements
+* Testing more realistic noise models and measurement uncertainty
 * Using sparse or partial boundary measurements
 * Comparing against purely optimization-based inverse recovery
 * Testing different neural network architectures
