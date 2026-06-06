@@ -119,7 +119,13 @@ The following plots compare the mean position and charge errors across the evalu
 
 The following example illustrates how physics-based refinement improves the initial neural network prediction.
 
-![Hybrid refinement example](figures/Hybrid_refinement_example.png)
+**Before refinement: neural prediction**
+
+![Before refinement: neural prediction](figures/Hybrid_refinement_before.png)
+
+**After refinement: hybrid prediction**
+
+![After refinement: hybrid prediction](figures/Hybrid_refinement_after.png)
 
 ## Discussion
 
