@@ -113,13 +113,13 @@ The models are evaluated using two metrics:
 
 The following plots compare the mean position and charge errors across the evaluated methods.
 
-![Position error comparison](figures/position_error_comparison.png)
+![Position error comparison](figures/Position_error_comparison.png)
 
-![Charge error comparison](figures/charge_error_comparison.png)
+![Charge error comparison](figures/Charge_error_comparison.png)
 
 The following example illustrates how physics-based refinement improves the initial neural network prediction.
 
-![Hybrid refinement example](figures/hybrid_refinement_example.png)
+![Hybrid refinement example](figures/Hybrid_refinement_example.png)
 
 ## Discussion
 
