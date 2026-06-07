@@ -139,16 +139,22 @@ The results also show that using the known physical forward model can help reduc
 
 ## Repository Structure
 
-```text
 physics-informed-electrostatic-source-recovery/
 ├── notebooks/
 │   └── 01_physics_informed_electrostatic_source_recovery.ipynb
 ├── src/
 │   └── 01_physics_informed_electrostatic_source_recovery.py
+├── figures/
+│   ├── position_error_comparison.png
+│   ├── charge_error_comparison.png
+│   ├── hybrid_refinement_before.png
+│   ├── hybrid_refinement_after.png
+│   └── additional_report_figures/
+├── results/
+│   └── ai_inverse_solver_results.csv
 ├── requirements.txt
 ├── LICENSE
 └── README.md
-```
 
 ## How to Run
 
