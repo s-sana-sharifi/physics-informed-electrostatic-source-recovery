@@ -139,6 +139,7 @@ The results also show that using the known physical forward model can help reduc
 
 ## Repository Structure
 
+```
 physics-informed-electrostatic-source-recovery/
 ├── notebooks/
 │   └── 01_physics_informed_electrostatic_source_recovery.ipynb
@@ -155,6 +156,8 @@ physics-informed-electrostatic-source-recovery/
 ├── requirements.txt
 ├── LICENSE
 └── README.md
+```
+
 
 ## How to Run
 
