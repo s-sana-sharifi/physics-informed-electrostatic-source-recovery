@@ -139,6 +139,7 @@ The results also show that using the known physical forward model can help reduc
 
 ## Repository Structure
 
+```text
 physics-informed-electrostatic-source-recovery/
 ├── notebooks/
 │   └── 01_physics_informed_electrostatic_source_recovery.ipynb
@@ -155,6 +156,7 @@ physics-informed-electrostatic-source-recovery/
 ├── requirements.txt
 ├── LICENSE
 └── README.md
+``` 
 
 ## How to Run
 
@@ -214,8 +216,10 @@ The main limitations are:
 * The sources are modeled as softened point charges
 * Only synthetic data is used
 * Noise and measurement uncertainty are not fully modeled
-
-The purpose of the project is to demonstrate an inverse-modeling workflow rather than to solve a real-world source reconstruction problem directly.
+* The forward model uses a regularized 3D Coulomb kernel (1/r) rather than the correct 2D Green's function of the Laplace equation, which is logarithmic. In two dimensions, the electric potential of a point charge behaves as
+``` text
+ V ~ −ln r.
+```
 
 ## Future Work
 
